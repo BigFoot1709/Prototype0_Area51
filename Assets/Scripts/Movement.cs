@@ -55,6 +55,9 @@ public class Movement : MonoBehaviour
         if (other.gameObject.tag == "Lift1" && Input.GetKeyDown(KeyCode.E))
         {
             this.transform.position = lift2.transform.position;
+        } else if (other.gameObject.tag == "Lift2" && Input.GetKeyDown(KeyCode.E))
+        {
+            this.transform.position = lift1.transform.position;
         }
     }
 }

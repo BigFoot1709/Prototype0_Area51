@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Door
   - Lift1
+  - Lift2
   layers:
   - Default
   - TransparentFX
