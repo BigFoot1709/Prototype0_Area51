@@ -10,6 +10,8 @@ public class Movement : MonoBehaviour
 
     public GameObject lift1;
     public GameObject lift2;
+    public GameObject bulletPrefab;
+    public GameObject bulletSpawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class Movement : MonoBehaviour
             Vector3 moveRight = this.transform.position;
             moveRight.x = moveRight.x + speed;
             this.transform.position = moveRight;
+
         }
 
         if (Input.GetKey(KeyCode.A))
@@ -34,6 +37,12 @@ public class Movement : MonoBehaviour
             Vector3 moveLeft = this.transform.position;
             moveLeft.x = moveLeft.x - speed;
             this.transform.position = moveLeft;
+           // this.transform.Rotate(0f, 180f, 0f);
+        }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Instantiate(bulletPrefab, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
         }
     }
 

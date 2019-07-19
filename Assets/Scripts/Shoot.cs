@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
-    private float bulletSpeed = 10f;
-    public float timer;
+    private float bulletSpeed = -1f;
+    //private float timer;
+
 
     // Start is called before the first frame update
     void Start()
@@ -16,8 +17,9 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        if (timer > 1f)
+        this.gameObject.transform.position = transform.position * bulletSpeed;
+        /*timer += Time.deltaTime;
+        if (timer > 2f)
         {
             Destroy(gameObject);
         }
@@ -25,6 +27,6 @@ public class Shoot : MonoBehaviour
         Vector3 pos = transform.position;
         Vector3 velocity = new Vector3(0f, bulletSpeed * Time.deltaTime, 0f);
         pos += transform.rotation * velocity;
-        transform.position = pos;
+        transform.position = pos;*/
     }
 }
