@@ -5,10 +5,11 @@ using UnityEngine;
 public class PlayerAnim : MonoBehaviour
 {
     public Animator playerAnimation;
+    public SpriteRenderer playerSprite;
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -17,13 +18,15 @@ public class PlayerAnim : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.A)) || (Input.GetKeyDown(KeyCode.D))) {
 
             playerAnimation.SetBool("isWalking", true);
-
+            if (Input.GetKeyDown(KeyCode.A))
+                playerSprite.flipX = true;
+            else if(Input.GetKeyDown(KeyCode.D))
+                playerSprite.flipX = false;
         }
         if ((Input.GetKeyUp(KeyCode.A)) || (Input.GetKeyUp(KeyCode.D)))
         {
 
             playerAnimation.SetBool("isWalking", false);
-
         }
     }
 }
