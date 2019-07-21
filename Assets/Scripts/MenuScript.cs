@@ -15,7 +15,7 @@ public class MenuScript : MonoBehaviour
         if (Input.GetKey(KeyCode.R))
         {
             //Press a key to reset the level
-            //SceneManager.LoadScene("Main");
+            SceneManager.LoadScene("LevelScene");
             //Need the name of the main level scene
         }
     }
@@ -23,7 +23,7 @@ public class MenuScript : MonoBehaviour
     public void PlayGame()
     {
         //On Button Press in menu
-        //SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("LevelScene");
         //Need the name of the main level scene
     }
 
