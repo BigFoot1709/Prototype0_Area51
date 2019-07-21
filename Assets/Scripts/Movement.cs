@@ -12,11 +12,18 @@ public class Movement : MonoBehaviour
     public GameObject lift2;
     public bool gunRight;
     public bool gunLeft;
+    AudioSource source;
+    public AudioClip walking;
+    public AudioClip openDoor;
+    public bool isWalking;
+    private float timer;
+    public float walkTime = 5f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        source = Camera.main.GetComponent<AudioSource>();
+        isWalking = false;
     }
 
     // Update is called once per frame
@@ -24,7 +31,7 @@ public class Movement : MonoBehaviour
     {
 
         //Basic side-to-side player movement
-
+        
         if (Input.GetKey(KeyCode.D))
         {
             Vector3 moveRight = this.transform.position;
@@ -32,16 +39,33 @@ public class Movement : MonoBehaviour
             this.transform.position = moveRight;
             gunLeft = false;
             gunRight = true;
+            isWalking = true;
         }
 
-        if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.A))
         {
             Vector3 moveLeft = this.transform.position;
             moveLeft.x = moveLeft.x - speed;
             this.transform.position = moveLeft;
             gunRight = false;
             gunLeft = true;
+            isWalking = true;
         }
+        else
+        {
+            isWalking = false;
+            source.loop = isWalking;
+        }
+
+        if (isWalking == true)
+        {
+
+            //Invoke("Walking", 0f);
+            //source.clip = walking;
+            
+        }
+
+        //isWalking = false;
     }
 
     // collision to detect player input at doors
@@ -52,6 +76,7 @@ public class Movement : MonoBehaviour
         {
             //rotate door to look open instead of destroy, Destroy below is temporary!
             Destroy(collision.gameObject);
+            source.PlayOneShot(openDoor);
         }
     }
 
@@ -67,4 +92,14 @@ public class Movement : MonoBehaviour
             this.transform.position = lift1.transform.position;
         }
     }
+
+    /*void Walking()
+    {
+        timer += Time.deltaTime;
+        if (timer >= walkTime)
+        {
+            source.PlayOneShot(walking);
+            timer = 0f;
+        }
+    }*/
 }

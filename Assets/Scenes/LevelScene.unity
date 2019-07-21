@@ -893,7 +893,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alien: {fileID: 1119336806}
-  openCage: {fileID: 0}
+  openCage: {fileID: 21300000, guid: d08f94c43fd8f7e4f9969c5ffa72af2d, type: 3}
+  savedLives: {fileID: 8300000, guid: 6fd122d28d1dffd42ab1be52b659eded, type: 3}
 --- !u!1 &85869842
 GameObject:
   m_ObjectHideFlags: 0
@@ -4101,7 +4102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alien: {fileID: 1908905671}
-  openCage: {fileID: 0}
+  openCage: {fileID: 21300000, guid: d08f94c43fd8f7e4f9969c5ffa72af2d, type: 3}
+  savedLives: {fileID: 8300000, guid: 6fd122d28d1dffd42ab1be52b659eded, type: 3}
 --- !u!1 &339625994
 GameObject:
   m_ObjectHideFlags: 0
@@ -4373,6 +4375,10 @@ MonoBehaviour:
   lift2: {fileID: 0}
   gunRight: 0
   gunLeft: 0
+  walking: {fileID: 0}
+  openDoor: {fileID: 0}
+  isWalking: 0
+  walkTime: 0
 --- !u!136 &359858260
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7069,6 +7075,10 @@ MonoBehaviour:
   lift2: {fileID: 1077989978}
   gunRight: 0
   gunLeft: 0
+  walking: {fileID: 8300000, guid: 3df39ae7f12897b4ebc4a1940e52c727, type: 3}
+  openDoor: {fileID: 8300000, guid: fe6420d3abaeee24da853d0376656db2, type: 3}
+  isWalking: 0
+  walkTime: 0
 --- !u!4 &711420376
 Transform:
   m_ObjectHideFlags: 0
@@ -9792,6 +9802,11 @@ PrefabInstance:
       propertyPath: playerSprite
       value: 
       objectReference: {fileID: 1644440138}
+    - target: {fileID: 3602630602584254128, guid: ab6528837c9634c4a8b623438fb1b395,
+        type: 3}
+      propertyPath: walking
+      value: 
+      objectReference: {fileID: 8300000, guid: 3df39ae7f12897b4ebc4a1940e52c727, type: 3}
     - target: {fileID: 3602630603042435972, guid: ab6528837c9634c4a8b623438fb1b395,
         type: 3}
       propertyPath: m_Layer
@@ -16649,7 +16664,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alien: {fileID: 1069356325}
-  openCage: {fileID: 0}
+  openCage: {fileID: 21300000, guid: d08f94c43fd8f7e4f9969c5ffa72af2d, type: 3}
+  savedLives: {fileID: 8300000, guid: 6fd122d28d1dffd42ab1be52b659eded, type: 3}
 --- !u!1 &1602625750
 GameObject:
   m_ObjectHideFlags: 0
@@ -19220,7 +19236,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alien: {fileID: 2137456167}
-  openCage: {fileID: 0}
+  openCage: {fileID: 21300000, guid: d08f94c43fd8f7e4f9969c5ffa72af2d, type: 3}
+  savedLives: {fileID: 8300000, guid: 6fd122d28d1dffd42ab1be52b659eded, type: 3}
 --- !u!1 &1908905671
 GameObject:
   m_ObjectHideFlags: 0
