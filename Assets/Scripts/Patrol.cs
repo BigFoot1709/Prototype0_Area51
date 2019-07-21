@@ -40,7 +40,7 @@ public class Patrol : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Door")
+        if (other.gameObject.tag == "Door" || other.gameObject.tag == "DestructWall")
         {
             print("door!");
             if (movingRight == true)

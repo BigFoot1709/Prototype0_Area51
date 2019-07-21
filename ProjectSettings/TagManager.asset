@@ -10,6 +10,7 @@ TagManager:
   - Alien
   - Cage
   - Enemy
+  - DestructWall
   layers:
   - Default
   - TransparentFX
