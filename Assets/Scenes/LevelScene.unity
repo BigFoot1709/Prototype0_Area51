@@ -893,6 +893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alien: {fileID: 1119336806}
+  openCage: {fileID: 0}
 --- !u!1 &85869842
 GameObject:
   m_ObjectHideFlags: 0
@@ -2137,7 +2138,7 @@ GameObject:
   - component: {fileID: 191638318}
   m_Layer: 0
   m_Name: Cube (14)
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2936,6 +2937,7 @@ MonoBehaviour:
   bulletPrefab2: {fileID: 716329418306017311, guid: e98f95ff1f5277840bb9bf2a1fa81f56,
     type: 3}
   bulletSpawn2: {fileID: 1591453170}
+  gunShot: {fileID: 8300000, guid: 3a42799f4a49bda448ac2c6b32e6e3e7, type: 3}
 --- !u!1 &255984346
 GameObject:
   m_ObjectHideFlags: 0
@@ -4099,6 +4101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alien: {fileID: 1908905671}
+  openCage: {fileID: 0}
 --- !u!1 &339625994
 GameObject:
   m_ObjectHideFlags: 0
@@ -5595,6 +5598,7 @@ MonoBehaviour:
   bulletPrefab2: {fileID: 716329418306017311, guid: e98f95ff1f5277840bb9bf2a1fa81f56,
     type: 3}
   bulletSpawn2: {fileID: 822951681}
+  gunShot: {fileID: 8300000, guid: 3a42799f4a49bda448ac2c6b32e6e3e7, type: 3}
 --- !u!54 &571367528
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6794,6 +6798,7 @@ MonoBehaviour:
   bulletPrefab2: {fileID: 716329418306017311, guid: e98f95ff1f5277840bb9bf2a1fa81f56,
     type: 3}
   bulletSpawn2: {fileID: 1853855061}
+  gunShot: {fileID: 8300000, guid: 3a42799f4a49bda448ac2c6b32e6e3e7, type: 3}
 --- !u!54 &707296916
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7101,6 +7106,7 @@ MonoBehaviour:
     type: 3}
   bulletSpawn1: {fileID: 589092200}
   bulletSpawn2: {fileID: 698388747}
+  gunShot: {fileID: 8300000, guid: 26c955d183188b345b9836dcc239f485, type: 3}
 --- !u!1 &724142659
 GameObject:
   m_ObjectHideFlags: 0
@@ -11110,6 +11116,7 @@ MonoBehaviour:
   bulletPrefab2: {fileID: 716329418306017311, guid: e98f95ff1f5277840bb9bf2a1fa81f56,
     type: 3}
   bulletSpawn2: {fileID: 2010246110}
+  gunShot: {fileID: 8300000, guid: 3a42799f4a49bda448ac2c6b32e6e3e7, type: 3}
 --- !u!54 &1106324569
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13589,6 +13596,7 @@ GameObject:
   - component: {fileID: 1375769578}
   - component: {fileID: 1375769577}
   - component: {fileID: 1375769576}
+  - component: {fileID: 1375769579}
   m_Layer: 10
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -13660,6 +13668,102 @@ Transform:
   m_Father: {fileID: 711420376}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1375769579
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375769575}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1378335827
 GameObject:
   m_ObjectHideFlags: 0
@@ -14270,6 +14374,7 @@ MonoBehaviour:
   bulletPrefab2: {fileID: 716329418306017311, guid: e98f95ff1f5277840bb9bf2a1fa81f56,
     type: 3}
   bulletSpawn2: {fileID: 2032509613}
+  gunShot: {fileID: 8300000, guid: 3a42799f4a49bda448ac2c6b32e6e3e7, type: 3}
 --- !u!54 &1418357166
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15303,6 +15408,7 @@ MonoBehaviour:
   bulletPrefab2: {fileID: 716329418306017311, guid: e98f95ff1f5277840bb9bf2a1fa81f56,
     type: 3}
   bulletSpawn2: {fileID: 724142659}
+  gunShot: {fileID: 8300000, guid: 3a42799f4a49bda448ac2c6b32e6e3e7, type: 3}
 --- !u!54 &1482699188
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16543,6 +16649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alien: {fileID: 1069356325}
+  openCage: {fileID: 0}
 --- !u!1 &1602625750
 GameObject:
   m_ObjectHideFlags: 0
@@ -16832,6 +16939,7 @@ MonoBehaviour:
   bulletPrefab2: {fileID: 716329418306017311, guid: e98f95ff1f5277840bb9bf2a1fa81f56,
     type: 3}
   bulletSpawn2: {fileID: 32702988}
+  gunShot: {fileID: 8300000, guid: 3a42799f4a49bda448ac2c6b32e6e3e7, type: 3}
 --- !u!54 &1620467297
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18723,6 +18831,7 @@ MonoBehaviour:
   bulletPrefab2: {fileID: 716329418306017311, guid: e98f95ff1f5277840bb9bf2a1fa81f56,
     type: 3}
   bulletSpawn2: {fileID: 2032453700}
+  gunShot: {fileID: 8300000, guid: 3a42799f4a49bda448ac2c6b32e6e3e7, type: 3}
 --- !u!54 &1881736777
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19111,6 +19220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alien: {fileID: 2137456167}
+  openCage: {fileID: 0}
 --- !u!1 &1908905671
 GameObject:
   m_ObjectHideFlags: 0
