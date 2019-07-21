@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
-    private float bulletSpeed = -1f;
     //private float timer;
-
+    public GameObject bulletPrefab1;
+    public GameObject bulletPrefab2;
+    public GameObject bulletSpawn1;
+    public GameObject bulletSpawn2;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +19,17 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.gameObject.transform.position = transform.position * bulletSpeed;
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (GetComponent<Movement>().gunRight == true) {
+                Instantiate(bulletPrefab1, bulletSpawn1.transform.position, bulletSpawn1.transform.rotation);
+            }
+
+            if (GetComponent<Movement>().gunLeft == true) {
+                Instantiate(bulletPrefab2, bulletSpawn2.transform.position, bulletSpawn2.transform.rotation);
+            }
+        }
+
         /*timer += Time.deltaTime;
         if (timer > 2f)
         {

@@ -28,13 +28,10 @@ public class AlienFollow : MonoBehaviour
         playerholder = CurrentPlayer;
         player = GameObject.FindGameObjectWithTag("Player");
         //lookPosHolder = LookPos;
-
     }
 
     private void Update()
     {
-
-        
         LookPos = GameObject.FindGameObjectWithTag("Player").transform;
         CurrentPlayer = GameObject.FindGameObjectWithTag("Player").transform;
         player = GameObject.FindGameObjectWithTag("Player");
@@ -43,7 +40,6 @@ public class AlienFollow : MonoBehaviour
 
         transform.position = Smoothening;
         //transform.LookAt(LookPos.transform.position + ShiftPos);
-
     }
 
     private void LateUpdate()
