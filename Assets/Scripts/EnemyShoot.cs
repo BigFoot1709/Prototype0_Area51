@@ -30,7 +30,14 @@ public class EnemyShoot : MonoBehaviour
             if (hit.collider.gameObject.tag == "Player")
             {
                 GetComponent<Patrol>().enabled = false;
-                Instantiate(bulletPrefab, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
+                if (GetComponent<Patrol>().movingRight == true)
+                {
+                    Instantiate(bulletPrefab, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
+                }
+                else if(GetComponent<Patrol>().movingRight == false)
+                {
+                    Instantiate(bulletPrefab2, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
+                }
             }
         }
         else

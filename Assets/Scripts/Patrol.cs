@@ -6,7 +6,7 @@ public class Patrol : MonoBehaviour
 {
     public float speed;
     public float distance;
-    private bool movingRight = true;
+    public bool movingRight = true;
     public Transform groundDetection;
     public Collider colliderMe;
     public Collider colliderU;

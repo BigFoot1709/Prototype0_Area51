@@ -9,6 +9,7 @@ TagManager:
   - Lift2
   - Alien
   - Cage
+  - Enemy
   layers:
   - Default
   - TransparentFX

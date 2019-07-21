@@ -19,4 +19,18 @@ public class Bullet2 : MonoBehaviour
         //rgbBullet.velocity = transform.position * -speed;
         rgbBullet.AddForce(new Vector3(1f, 0f, 0f), ForceMode.Force);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Player" || collision.gameObject.tag == "Door")
+        {
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+    }
 }
